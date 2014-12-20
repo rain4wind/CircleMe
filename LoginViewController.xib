@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="CircleMe" customModuleProvider="target">
             <connections>
-                <outlet property="circleView" destination="IST-bf-6d2" id="x3n-KP-hoD"/>
+                <outlet property="buttonEvent" destination="w97-jy-fDm" id="7aF-CN-COM"/>
+                <outlet property="circleView" destination="BQR-m2-9Qg" id="65n-rd-D2M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,25 +16,39 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IST-bf-6d2">
-                    <rect key="frame" x="87" y="117" width="200" height="200"/>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BQR-m2-9Qg">
+                    <rect key="frame" x="87" y="115" width="200" height="200"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CircleMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diw-JS-hV8">
-                            <rect key="frame" x="0.0" y="79" width="200" height="41"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CircleMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zda-14-L6N">
+                            <rect key="frame" x="39" y="89" width="122" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.98431372549999996" green="0.67843137249999996" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="1" green="0.50984898190000005" blue="0.30706548649999998" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w97-jy-fDm">
+                    <rect key="frame" x="12" y="582" width="350" height="41"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                    <state key="normal" title="Sign in with wechat">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.45098039215686275" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="1" green="0.45098039215686275" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="IST-bf-6d2" secondAttribute="centerX" id="zuE-5k-eVy"/>
+                <constraint firstItem="w97-jy-fDm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="EjL-xX-SlJ"/>
+                <constraint firstItem="BQR-m2-9Qg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="87" id="eVv-M7-2lH"/>
+                <constraint firstItem="w97-jy-fDm" firstAttribute="top" secondItem="BQR-m2-9Qg" secondAttribute="bottom" constant="267" id="i3r-xk-Hqg"/>
+                <constraint firstAttribute="trailing" secondItem="w97-jy-fDm" secondAttribute="trailing" constant="13" id="jth-AT-1nf"/>
+                <constraint firstAttribute="trailing" secondItem="BQR-m2-9Qg" secondAttribute="trailing" constant="88" id="m7b-cR-a71"/>
+                <constraint firstItem="w97-jy-fDm" firstAttribute="top" secondItem="BQR-m2-9Qg" secondAttribute="bottom" constant="267" id="pHW-6o-cg0"/>
+                <constraint firstAttribute="bottom" secondItem="w97-jy-fDm" secondAttribute="bottom" constant="44" id="rlD-VK-LYV"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="139.5" y="154.5"/>
+            <point key="canvasLocation" x="-63.5" y="359.5"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

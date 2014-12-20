@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  CircleMe
 //
-//  Created by YANGReal on 14-12-19.
-//  Copyright (c) 2014年 YANGReal. All rights reserved.
+//  Created by Guanlin Cheng on 2014-12-19.
+//  Copyright (c) 2014 Guanlin Cheng. All rights reserved.
 //
 
 import UIKit
@@ -16,13 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
+        var screenFrame = UIScreen.mainScreen().bounds
+        window = UIWindow(frame: screenFrame)
+        loginViewController = LoginViewController(nibName:"LoginViewController", bundle: nil)
+        window?.rootViewController = loginViewController
         
-        var screenFrame = UIScreen.mainScreen().bounds;
-        window = UIWindow(frame: screenFrame);
-       // window?.backgroundColor = UIColor.redColor();
-        loginViewController = LoginViewController(nibName: "LoginViewController", bundle: nil);
-        window?.rootViewController = loginViewController;
-        window?.makeKeyAndVisible();
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
